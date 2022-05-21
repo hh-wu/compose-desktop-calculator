@@ -13,6 +13,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerMoveFilter
@@ -77,7 +78,8 @@ fun KeyboardKey(modifier: Modifier, key: Key?, mainOutput: MutableState<TextFiel
             )
         } else {
             Icon(
-                asset = key.icon,
+                imageVector = key.icon,
+                contentDescription = "delete",
                 tint = MaterialTheme.colors.primary
             )
         }
@@ -88,6 +90,7 @@ val KEY_BORDER_WIDTH = 1.dp
 val KEY_BORDER_COLOR = Color.Gray
 val KEY_ACTIVE_BACKGROUND = Color.White
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun KeyView(
     modifier: Modifier = Modifier,
@@ -113,7 +116,7 @@ fun KeyView(
                     false
                 }
             ),
-        children = children
+        content = children
     )
 }
 

@@ -2,8 +2,10 @@ package jetbrains.compose.calculator.resources
 
 import androidx.compose.material.lightColors
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.fontFamily
-import androidx.compose.ui.text.platform.font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+
+import androidx.compose.ui.text.platform.Font
 import androidx.compose.ui.unit.dp
 
 val CALCULATOR_PADDING = 4.dp
@@ -14,6 +16,6 @@ val lightThemeColors = lightColors(
     surface = Color(0xFFF5F5F5)
 )
 
-val jostFontFamily = fontFamily(
-    listOf(font("jost_regular", "jost_regular.ttf"))
+val jostFontFamily = FontFamily(
+    listOf(Font("jost_regular.ttf", weight = FontWeight.Normal))
 )

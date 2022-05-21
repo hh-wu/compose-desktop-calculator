@@ -1,7 +1,7 @@
 package jetbrains.compose.calculator.view
 
 import androidx.compose.runtime.MutableState
-import androidx.compose.ui.graphics.vector.VectorAsset
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.TextFieldValue
 import jetbrains.compose.calculator.resources.Assets
 import jetbrains.compose.calculator.service.calculate
@@ -9,7 +9,7 @@ import jetbrains.compose.calculator.service.calculate
 data class Key(
     val value: String,
     val type: KeyType,
-    val icon: VectorAsset? = null,
+    val icon: ImageVector? = null,
     val onClick: ((mainOutput: MutableState<TextFieldValue>) -> Unit)? = null
 )
 
